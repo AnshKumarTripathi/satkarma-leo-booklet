@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --heading-font: "Dancing Script";
+  --primary-color: #f8f6f4;
+  --secondary-color: #607274;
+  --bg-color: #c4dfdf;
+  --bg1-color: #d2e9e9;
+  --bg2-color: #e3f4f4;
+}
+
+img {
+  transition: all 0.3s ease-in-out;
+}
+img:hover {
+  box-shadow: var(--bg-color) 0px 10px 32px 0px;
+}
+
+hr {
+  color: var(--bg1-color);
+  border: 1px solid var(--bg2-color);
+}
+
+/* Keep the rest of your existing CSS */
+
+/* Navigation Starts */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  background: var(--bg-color);
+}
+
+.heading-title {
+  font-size: 4rem;
+  font-family: var(--heading-font);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+ul li {
+  margin-left: 5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  /* padding: 20px; */
+  font-family: var(--heading-font);
+  transition: all 0.2s ease-in-out;
+}
+
+ul li a:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Navigation Ends */
+
+/* PDF SECTIONS Starts */
+.pdf {
+  height: 100vh;
+  padding-top: 5rem;
+  align-items: center;
+  text-align: center;
+  background: var(--primary-color);
+}
+
+.heading-title-pdf {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 5rem;
+}
+.heading-title-pdf span {
+  font-family: var(--heading-font);
+  color: var(--bg-color);
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.heading-title-pdf span:hover {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border-radius: 20px;
+}
+
+iframe {
+  border: none;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 80vh;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: var(--bg-color) 5px 20px 42px 5px;
+}
+/* PDF SECTIONS Ends */
+
+/* Team Starts */
+.team-haeading {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+.team {
+  height: 150vh;
+  /* max-width: 2000px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg2-color);
+  padding-bottom: 10rem;
+  /* text-align: center; */
+}
+
+.card-main {
+  height: 600px;
+  width: 300px;
+  padding: 20px;
+  /* background: #333; */
+  border: 2px solid #00000000;
+  /* border-radius: 20px; */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-main:hover,
+.card-container .card:hover {
+  border: 2px solid var(--bg-color);
+  border-radius: 20px;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: right top;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+  font-family: serif;
+}
+
+.occupation {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.icons-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.icons-list li {
+  margin-left: 10px;
+}
+
+.icons-list li a {
+  transition: all 02s ease-in-out;
+}
+
+.icons-list li a:hover {
+  color: #fff;
+  padding-bottom: 0;
+}
+
+/* .quote {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-style: italic;
+
+}
+
+.quote span {
+  font-size: 2rem;
+  font-style: italic;
+} */
+
+.card-container {
+  width: 100%;
+  /* background: #333; */
+  /* border: 2px solid aqua; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.card-container .card {
+  height: 500px;
+  width: 300px;
+  border: 2px solid #00000000;
+  padding: 20px;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+/* Team Ends */
+
+/* Footer starts */
+footer {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+footer .title {
+  font-size: 5rem;
+  font-family: var(--heading-font);
+}
+
+footer li p {
+  font-size: 1rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 3rem;
+}
+/* Footer Enfds */
+
+/* Resposniveness */
+@media only screen and (max-width: 100px) {
+  .heading-title {
+    font-size: 4rem;
+  }
+  iframe {
+    width: 80%;
+  }
+  .heading-title-pdf {
+    font-size: 2rem;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .card {
+    margin-top: 1rem;
+  }
+  .team {
+    height: 250vh;
+  }
+  footer {
+    height: 50vh;
+  }
+}
