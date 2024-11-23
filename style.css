@@ -1,18 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
-
-/* Resets */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); /* Resets */
 * {
   margin: 0;
   padding: 0;
-  font-family: cursive;
+  font-family: cursive, sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 :root {
-  --heading-font: "Dancing Script";
+  --heading-font: "Dancing Script", sans-serif;
   --primary-color: #f8f6f4;
   --secondary-color: #607274;
   --bg-color: #c4dfdf;
@@ -23,6 +19,7 @@ html {
 img {
   transition: all 0.3s ease-in-out;
 }
+
 img:hover {
   box-shadow: var(--bg-color) 0px 10px 32px 0px;
 }
@@ -31,8 +28,6 @@ hr {
   color: var(--bg1-color);
   border: 1px solid var(--bg2-color);
 }
-
-/* Keep the rest of your existing CSS */
 
 /* Navigation Starts */
 nav {
@@ -66,7 +61,6 @@ ul li a {
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 2rem;
-  /* padding: 20px; */
   font-family: var(--heading-font);
   transition: all 0.2s ease-in-out;
 }
@@ -76,13 +70,9 @@ ul li a:hover {
   font-weight: bold;
 }
 
-/* Navigation Ends */
-
-/* PDF SECTIONS Starts */
+/* PDF Section Starts */
 .pdf {
-  height: 100vh;
-  padding-top: 5rem;
-  align-items: center;
+  padding: 5rem 0;
   text-align: center;
   background: var(--primary-color);
 }
@@ -92,6 +82,7 @@ ul li a:hover {
   margin-bottom: 2rem;
   line-height: 5rem;
 }
+
 .heading-title-pdf span {
   font-family: var(--heading-font);
   color: var(--bg-color);
@@ -105,43 +96,38 @@ ul li a:hover {
   border-radius: 20px;
 }
 
-iframe {
+#pdf-frame {
   border: none;
   background-color: var(--bg-color);
-  width: 100%;
-  height: 80vh;
-  max-width: 1200px;
+  height: 85vh;
+  width: 90%;
+  max-width: 100%;
   border-radius: 10px;
   box-shadow: var(--bg-color) 5px 20px 42px 5px;
+  transform: scale(0.9);
+  transform-origin: top left;
 }
-/* PDF SECTIONS Ends */
 
-/* Team Starts */
-.team-haeading {
-  font-size: 5rem;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-}
+/* Team Section Starts */
 .team {
-  height: 150vh;
-  /* max-width: 2000px; */
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--bg2-color);
-  padding-bottom: 10rem;
-  /* text-align: center; */
+}
+
+.team-haeading {
+  font-size: 5rem;
+  margin-bottom: 5rem;
 }
 
 .card-main {
-  height: 600px;
-  width: 300px;
+  height: auto;
+  width: 90%;
   padding: 20px;
-  /* background: #333; */
-  border: 2px solid #00000000;
-  /* border-radius: 20px; */
-  display: flex;
   text-align: center;
+  display: flex;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
 }
@@ -178,62 +164,48 @@ iframe {
   flex-direction: row;
   margin-top: 1rem;
 }
+
 .icons-list li {
   margin-left: 10px;
 }
 
 .icons-list li a {
-  transition: all 02s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .icons-list li a:hover {
   color: #fff;
-  padding-bottom: 0;
 }
 
-/* .quote {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  font-style: italic;
-
-}
-
-.quote span {
-  font-size: 2rem;
-  font-style: italic;
-} */
-
+/* Card Container */
 .card-container {
   width: 100%;
-  /* background: #333; */
-  /* border: 2px solid aqua; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  /* flex-direction: column; */
   margin-top: 5rem;
-  margin-bottom: 2rem;
 }
 
+/* Individual Card */
 .card-container .card {
-  height: 500px;
+  height: auto;
   width: 300px;
   border: 2px solid #00000000;
   padding: 20px;
-  margin-left: 2rem;
+  margin: 2rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
   transition: all 0.5s ease-in-out;
 }
-/* Team Ends */
 
-/* Footer starts */
+/* Footer Section Starts */
 footer {
-  height: 15vh;
+  height: auto;
+  padding: 2rem 0;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   background: var(--bg-color);
   cursor: pointer;
@@ -244,54 +216,99 @@ footer .title {
   font-family: var(--heading-font);
 }
 
-/* footer li p {
-  font-size: 1rem;
-} */
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
 
 footer ul li a {
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 3rem;
+  transition: all 0.2s ease-in-out;
 }
-/* Footer Enfds */
 
-/* Resposniveness */
+footer ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsiveness */
 @media only screen and (max-width: 1000px) {
   nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 30vh;
   }
   .heading-title {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
-  iframe {
-    width: 80%;
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul li {
+    margin: 0.5rem 0;
+  }
+  ul li a {
+    font-size: 1.5rem;
+  }
+  .pdf {
+    padding-top: 3rem;
+    height: 100vh;
+  }
+  .heading-title-pdf {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  #pdf-frame {
+    width: 90%;
+    height: 90%;
+  }
+  .team-haeading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .card-main,
+  .card-container .card {
+    width: 90%;
+    margin: 1rem 0;
+    align-items: center;
+  }
+  footer .title {
+    font-size: 3rem;
+  }
+  footer ul li a {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heading-title {
+    font-size: 2rem;
+  }
+  ul li a {
+    font-size: 1.2rem;
   }
   .heading-title-pdf {
     font-size: 2rem;
   }
-  .card-container {
-    flex-direction: column;
-  }
-  .card-container .card {
-    margin-top: 1rem;
-  }
-  .team {
-    margin-top: 15rem;
-    height: 250vh;
-    padding-bottom: 50rem;
-  }
   .team-haeading {
     font-size: 2rem;
   }
-  footer {
-    /* margin-top: 20rem; */
-    height: 50vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .card-main,
+  .card-container .card {
+    width: 95%;
+    margin: 1rem 0;
+  }
+  footer .title {
+    font-size: 2rem;
+  }
+  footer ul li a {
+    font-size: 1.5rem;
   }
 }
